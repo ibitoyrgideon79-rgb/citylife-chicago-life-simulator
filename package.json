@@ -1,0 +1,20 @@
+{
+  "name": "citylife",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "test": "npm run test -w server",
+    "typecheck": "npm run typecheck -w client && npm run typecheck -w server",
+    "build:map": "node scripts/build-chicago-map.mjs",
+    "build:metro-map": "node --max-old-space-size=8192 scripts/build-chicago-metro.mjs",
+    "build": "npm run build -w client"
+  },
+  "devDependencies": {
+    "osm-pbf-parser": "^2.3.0"
+  }
+}

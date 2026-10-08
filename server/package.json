@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "smoke": "node test/smoke.mjs",
+    "test": "tsx --test test/economy.test.ts test/roadRouting.test.ts"
+  },
+  "dependencies": {
+    "@colyseus/schema": "^2.0.35",
+    "@colyseus/ws-transport": "^0.15.3",
+    "colyseus": "^0.15.57"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0",
+    "colyseus.js": "^0.15.28"
+  }
+}
